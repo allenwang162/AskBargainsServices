@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="AskBargainsServices.DataFeedService" CodeBehind="DataFeedService.svc.cs" %>
