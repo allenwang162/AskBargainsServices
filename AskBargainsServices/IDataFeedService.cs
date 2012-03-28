@@ -14,10 +14,8 @@ namespace AskBargainsServices
     {
 
         [OperationContract]
-        string GetData(int value);
+        IList<ItemInfo> GetAllItemInfo();
 
-        [OperationContract]
-        ItemInfo GetDataUsingDataContract(ItemInfo composite);
 
         // TODO: Add your service operations here
     }
