@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e2acf5d6-6be7-42bd-ae62-2c2f26f387f8" name="allen.wang1@EDH11966WIN7 2012-03-29 15:06:46" runUser="ODHAUTH\allen.wang1" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="5d4401a8-ddd5-40c4-bf83-6d3d6b89b004">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="allen.wang1_EDH11966WIN7 2012-03-29 15_06_46">
+      <DeploymentItem filename="C:\Project\AskBargainsServices\AskBargainsServices\bin\AskBargainsServices.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-03-29T15:06:46.1397397-04:00" queuing="2012-03-29T15:06:47.2747397-04:00" start="2012-03-29T15:06:47.4447397-04:00" finish="2012-03-29T15:07:10.0667397-04:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="LoadAllDataFeedsTest" storage="c:\project\askbargainsservices\askbargainsservice.test\bin\debug\askbargainsservice.test.dll" id="5dec5d54-a73c-b52a-a7c7-a29e5ae1ebde">
+      <Execution id="7f9b13aa-f78a-4f59-ab6d-d9c73121e70f" />
+      <TestMethod codeBase="C:/Project/AskBargainsServices/AskBargainsService.Test/bin/Debug/AskBargainsService.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AskBargainsService.Test.DataFeedManagerTest, AskBargainsService.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LoadAllDataFeedsTest" />
+      <AspNet webSiteUrl="http://localhost:5147/">
+        <Host pathToWebApp="C:\Project\AskBargainsServices\AskBargainsServices" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5dec5d54-a73c-b52a-a7c7-a29e5ae1ebde" executionId="7f9b13aa-f78a-4f59-ab6d-d9c73121e70f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="7f9b13aa-f78a-4f59-ab6d-d9c73121e70f" testId="5dec5d54-a73c-b52a-a7c7-a29e5ae1ebde" testName="LoadAllDataFeedsTest" computerName="EDH11966WIN7" startTime="2012-03-29T15:06:47.7927397-04:00" endTime="2012-03-29T15:07:09.8427397-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7f9b13aa-f78a-4f59-ab6d-d9c73121e70f">
+      <Output>
+        <ErrorInfo>
+          <Message>The Web request 'http://localhost:5147/' completed successfully without running the test. This can occur when configuring the Web application for testing fails (an ASP.NET server error occurs when processing the request), or when no ASP.NET page is executed (the URL may point to an HTML page, a Web service, or a directory listing). Running tests in ASP.NET requires the URL to resolve to an ASP.NET page and for the page to execute properly up to the Load event. The response from the request is stored in the file 'WebRequestResponse_LoadAllDataFeedsTest.html' with the test results; typically this file can be opened with a Web browser to view its contents.</Message>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="EDH11966WIN7\WebRequestResponse_LoadAllDataFeedsTest.html" />
+      </ResultFiles>
+    </UnitTestResult>
+  </Results>
+</TestRun>

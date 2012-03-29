@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="8b7e4497-7610-4014-84f5-1878bedc3f4f" name="allen.wang1@EDH11966WIN7 2012-03-29 15:10:36" runUser="ODHAUTH\allen.wang1" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="5d4401a8-ddd5-40c4-bf83-6d3d6b89b004">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="allen.wang1_EDH11966WIN7 2012-03-29 15_10_36">
+      <DeploymentItem filename="C:\Project\AskBargainsServices\AskBargainsServices\bin\AskBargainsServices.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-03-29T15:10:36.1757397-04:00" queuing="2012-03-29T15:10:37.4057397-04:00" start="2012-03-29T15:10:37.5407397-04:00" finish="2012-03-29T15:12:34.7017397-04:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="EDH11966WIN7" outcome="Error" timestamp="2012-03-29T15:12:34.6997397-04:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="LoadAllDataFeedsTest" storage="c:\project\askbargainsservices\askbargainsservice.test\bin\debug\askbargainsservice.test.dll" id="5dec5d54-a73c-b52a-a7c7-a29e5ae1ebde">
+      <Execution id="6e9a1825-3960-433d-8a5e-4e18314cab5b" />
+      <TestMethod codeBase="C:/Project/AskBargainsServices/AskBargainsService.Test/bin/Debug/AskBargainsService.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AskBargainsService.Test.DataFeedManagerTest, AskBargainsService.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LoadAllDataFeedsTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5dec5d54-a73c-b52a-a7c7-a29e5ae1ebde" executionId="6e9a1825-3960-433d-8a5e-4e18314cab5b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="6e9a1825-3960-433d-8a5e-4e18314cab5b" testId="5dec5d54-a73c-b52a-a7c7-a29e5ae1ebde" testName="LoadAllDataFeedsTest" computerName="EDH11966WIN7" duration="00:01:57.0360000" startTime="2012-03-29T15:10:37.6647397-04:00" endTime="2012-03-29T15:12:34.7007397-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e9a1825-3960-433d-8a5e-4e18314cab5b">
+    </UnitTestResult>
+  </Results>
+</TestRun>
