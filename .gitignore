@@ -1,0 +1,13 @@
+*resharper.user
+# Visual Studio
+[Dd]debug/
+[Rr]release/
+*.sln.cache
+*.suo
+*.csproj.user
+
+# Resharper
+*[Rr]e[Ss]harper.user
+_ReSharper.*/
+
+/TestResults
