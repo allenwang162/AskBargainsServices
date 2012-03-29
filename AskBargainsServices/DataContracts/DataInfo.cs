@@ -2,20 +2,19 @@
 
 namespace AskBargainsServices.DataContracts
 {
-    // ItemInfo DataContract
     [DataContract]
     public class DataInfo
-    {        
+    {
 
         [DataMember]
         public string ItemID { get; set; }
 
         [DataMember]
         public string ItemName { get; set; }
-        
+
         [DataMember]
         public string ImgPath { get; set; }
-        
+
         [DataMember]
         public string CompanyName { get; set; }
 

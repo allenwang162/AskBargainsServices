@@ -2,8 +2,10 @@
 
 namespace AskBargainsServices.DataContracts
 {
+    [DataContract]
     public class CompanyInfo
     {
+
         [DataMember]
         public string CompanyID { get; set; }
 

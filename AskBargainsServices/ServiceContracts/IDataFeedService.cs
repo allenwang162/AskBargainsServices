@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 using System.ServiceModel;
 using AskBargainsServices.DataContracts;
 
 namespace AskBargainsServices.ServiceContracts
 {
-    // Service Contract for Loading DataFeed
     [ServiceContract]
     public interface IDataFeedService
     {
-        
+
         [OperationContract]
         IList<string> GetAllFileList();
 
@@ -34,7 +32,7 @@ namespace AskBargainsServices.ServiceContracts
 
         [OperationContract]
         IList<DataInfo> GetAllDataInfoOrderByDesc();
-        
+
         [OperationContract]
         IList<DataInfo> GetDataInfoListByItemIDList(List<string> itemIDList);
 
@@ -55,15 +53,11 @@ namespace AskBargainsServices.ServiceContracts
 
         [OperationContract]
         IList<CompanyInfo> GetAllCompanyInfoList();
-        
+
         [OperationContract]
         CompanyInfo GetCompanyInfoByCompanyID(string companyID);
 
         [OperationContract]
         CompanyInfo GetCompanyInfoByItemID(string itemID);
-
     }
-
-
-    
 }

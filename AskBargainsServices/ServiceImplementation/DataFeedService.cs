@@ -2,93 +2,94 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using AskBargainsServices.DataContracts;
 using AskBargainsServices.ServiceContracts;
 
 namespace AskBargainsServices.ServiceImplementation
 {
-    public class DataFeedService : IDataFeedService
+    public class DataFeedService :IDataFeedService
     {
         public IList<string> GetAllFileList()
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetDataInfoListByFileNameList(IList<string> fileNameList)
+        public IList<DataInfo> GetDataInfoListByFileNameList(IList<string> fileNameList)
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetDataInfoListByFileName(string fileName)
+        public IList<DataInfo> GetDataInfoListByFileName(string fileName)
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetDataInfoListByDefault()
+        public IList<DataInfo> GetDataInfoListByDefault()
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetDataInfoListByDateString(string date)
+        public IList<DataInfo> GetDataInfoListByDateString(string date)
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetDataInfoListByDate(DateTime date)
+        public IList<DataInfo> GetDataInfoListByDate(DateTime date)
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetDataInfoListByNumberOfItems(int numberOfItems)
+        public IList<DataInfo> GetDataInfoListByNumberOfItems(int numberOfItems)
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetAllDataInfoOrderByDesc()
+        public IList<DataInfo> GetAllDataInfoOrderByDesc()
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetDataInfoListByItemIDList(List<string> itemIDList)
+        public IList<DataInfo> GetDataInfoListByItemIDList(List<string> itemIDList)
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetDataInfoListByCompanyID(string companyID)
+        public IList<DataInfo> GetDataInfoListByCompanyID(string companyID)
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetDataInfoListByCompanyName(string companyName)
+        public IList<DataInfo> GetDataInfoListByCompanyName(string companyName)
         {
             throw new NotImplementedException();
         }
 
-        public DataContracts.DataInfo GetDataInfoByItemID(string itemID)
+        public DataInfo GetDataInfoByItemID(string itemID)
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetDataInfoListByBrand(string brandName)
+        public IList<DataInfo> GetDataInfoListByBrand(string brandName)
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.DataInfo> GetDataInfoListByCatagory(string catagoryName)
+        public IList<DataInfo> GetDataInfoListByCatagory(string catagoryName)
         {
             throw new NotImplementedException();
         }
 
-        public IList<DataContracts.CompanyInfo> GetAllCompanyInfoList()
+        public IList<CompanyInfo> GetAllCompanyInfoList()
         {
             throw new NotImplementedException();
         }
 
-        public DataContracts.CompanyInfo GetCompanyInfoByCompanyID(string companyID)
+        public CompanyInfo GetCompanyInfoByCompanyID(string companyID)
         {
             throw new NotImplementedException();
         }
 
-        public DataContracts.CompanyInfo GetCompanyInfoByItemID(string itemID)
+        public CompanyInfo GetCompanyInfoByItemID(string itemID)
         {
             throw new NotImplementedException();
         }
