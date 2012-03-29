@@ -1,0 +1,4 @@
+C:\Project\AskBargainsServices\AskBargainsServices\bin\AskBargainsServices.dll
+C:\Project\AskBargainsServices\AskBargainsServices\bin\AskBargainsServices.pdb
+C:\Project\AskBargainsServices\AskBargainsServices\obj\Debug\AskBargainsServices.dll
+C:\Project\AskBargainsServices\AskBargainsServices\obj\Debug\AskBargainsServices.pdb

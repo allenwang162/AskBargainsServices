@@ -63,11 +63,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataFeedService.svc.cs">
-      <DependentUpon>DataFeedService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="IDataFeedService.cs" />
+    <Compile Include="DataContracts\CompanyInfo.cs" />
+    <Compile Include="DataContracts\DataInfo.cs" />
+    <Compile Include="ServiceContracts\IDataFeedService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceImplementation\DataFeedService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
