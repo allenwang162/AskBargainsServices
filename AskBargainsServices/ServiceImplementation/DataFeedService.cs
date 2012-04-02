@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using AskBargainsServices.DataContracts;
+using AskBargainsServices.DataFeeds;
 using AskBargainsServices.ServiceContracts;
 
 namespace AskBargainsServices.ServiceImplementation
@@ -9,11 +10,13 @@ namespace AskBargainsServices.ServiceImplementation
     {
         public IList<string> GetAllFileList()
         {
+
             throw new NotImplementedException();
         }
 
         public IList<DataInfo> GetDataInfoListByFileNameList(IList<string> fileNameList)
         {
+            return DataFeedManager.LoadAllDataFeeds();
             throw new NotImplementedException();
         }
 
