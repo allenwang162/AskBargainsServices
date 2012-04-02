@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DataFeed20120322.xml" />
+    <Content Include="App_Data\DataFeed20120323.xml" />
+    <Content Include="App_Data\DataFeed20120324.xml" />
     <Content Include="DataFeedService.svc" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

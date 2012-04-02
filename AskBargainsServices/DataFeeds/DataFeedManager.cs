@@ -11,16 +11,43 @@ namespace AskBargainsServices.DataFeeds
 {
     public class DataFeedManager
     {
-        //private static readonly string DataFeedPath = HttpContext.Current.ApplicationInstance.Server.MapPath("~/App_Data");
+        private static readonly string DataFeedPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "App_Data");
+
+        public static IList<string> GetAllFileList()
+        {
+            var dataFeedNames = Directory.EnumerateFiles(DataFeedPath, "*xml", SearchOption.TopDirectoryOnly);
+        
+            return  dataFeedNames.ToList();
+        }
+ 
 
         public static IList<DataInfo> LoadAllDataFeeds()
         {
-            var path = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "App_Data");
-            var dataFeedNames = Directory.EnumerateFiles(path, "*xml", SearchOption.TopDirectoryOnly);
+            var dataFeedNames = GetAllFileList();
+
+            return dataFeedNames.Any() ? LoadDataInfoList(dataFeedNames) : null;
+        }
+
+        public static IList<DataInfo> LoadDataFeedsByFileNameList(IList<string> nameList)
+        {
+
+            var dataFeedNames = GetAllFileList().Where(n => nameList.Contains(n.Substring(n.LastIndexOf('\\') + 1)));
+
+            return dataFeedNames.Any() ? LoadDataInfoList(dataFeedNames) : null;
+        }
+
+        public static IList<DataInfo> LoadDataFeedByFileName(string fileName)
+        {
+            var dataFeedNames = GetAllFileList().Where(n => fileName == n.Substring(n.LastIndexOf('\\') + 1));
+
+            return dataFeedNames.Any() ? LoadDataInfoList(dataFeedNames) : null;
+        }
 
 
+        private static IList<DataInfo> LoadDataInfoList(IEnumerable<string> dataFeedNameList )
+        {
             var list = new List<DataInfo>();
-            foreach (var fileName in dataFeedNames)
+            foreach (var fileName in dataFeedNameList)
                 list.AddRange(XDocument.Load(fileName).Element("Data").Descendants("DataInfo").Select(da => LoadDataInfoFromXML(da)));
             return list;
         }

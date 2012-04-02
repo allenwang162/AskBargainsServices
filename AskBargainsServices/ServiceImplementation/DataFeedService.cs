@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AskBargainsServices.DataContracts;
 using AskBargainsServices.DataFeeds;
 using AskBargainsServices.ServiceContracts;
+using System.Linq;
 
 namespace AskBargainsServices.ServiceImplementation
 {
@@ -10,39 +11,39 @@ namespace AskBargainsServices.ServiceImplementation
     {
         public IList<string> GetAllFileList()
         {
-
-            throw new NotImplementedException();
+            return DataFeedManager.GetAllFileList();
         }
 
         public IList<DataInfo> GetDataInfoListByFileNameList(IList<string> fileNameList)
         {
-            return DataFeedManager.LoadAllDataFeeds();
-            throw new NotImplementedException();
+
+            return DataFeedManager.LoadDataFeedsByFileNameList(fileNameList);
         }
 
         public IList<DataInfo> GetDataInfoListByFileName(string fileName)
         {
-            throw new NotImplementedException();
+            return DataFeedManager.LoadDataFeedByFileName(fileName);
         }
 
         public IList<DataInfo> GetDataInfoListByDefault()
         {
-            throw new NotImplementedException();
+            return DataFeedManager.LoadAllDataFeeds();
         }
 
         public IList<DataInfo> GetDataInfoListByDateString(string date)
         {
-            throw new NotImplementedException();
+            return DataFeedManager.LoadAllDataFeeds().Where(d => d.PublishDate == date).ToList();
         }
 
         public IList<DataInfo> GetDataInfoListByDate(DateTime date)
         {
-            throw new NotImplementedException();
+            var datestr = date.ToString("yyyy-MM-dd");
+            return GetDataInfoListByDateString(datestr);
         }
 
         public IList<DataInfo> GetDataInfoListByNumberOfItems(int numberOfItems)
         {
-            throw new NotImplementedException();
+            return DataFeedManager.LoadAllDataFeeds().Take(numberOfItems).ToList();
         }
 
         public IList<DataInfo> GetAllDataInfoOrderByDesc()
