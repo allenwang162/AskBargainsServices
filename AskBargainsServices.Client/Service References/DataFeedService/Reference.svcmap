@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="56b443a1-52df-4f7c-aeb7-4362c1bb5aaf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5147/DataFeedService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataFeedService.xsd" MetadataType="Schema" ID="ad5f692e-20df-4838-a1fa-de0e46316b77" SourceId="1" SourceUrl="http://localhost:5147/DataFeedService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataFeedService1.xsd" MetadataType="Schema" ID="37be1b46-034e-431b-9410-dd5daae416a0" SourceId="1" SourceUrl="http://localhost:5147/DataFeedService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataFeedService2.xsd" MetadataType="Schema" ID="de4e7b66-4a57-40ff-b8cb-87ad5f9dd9d3" SourceId="1" SourceUrl="http://localhost:5147/DataFeedService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataFeedService3.xsd" MetadataType="Schema" ID="1c9076a9-8cf3-497d-ba3b-3c25ad9dace1" SourceId="1" SourceUrl="http://localhost:5147/DataFeedService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataFeedService.wsdl" MetadataType="Wsdl" ID="f6963ccf-e237-4705-a278-f1a557cdac8d" SourceId="1" SourceUrl="http://localhost:5147/DataFeedService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DataFeedService1.wsdl" MetadataType="Wsdl" ID="c19690f3-fda3-49f1-885f-ea0c00eebb43" SourceId="1" SourceUrl="http://localhost:5147/DataFeedService.svc?wsdl" />
+    <MetadataFile FileName="DataFeedService.disco" MetadataType="Disco" ID="ef6b59f2-2772-4ed4-8674-281547c76f91" SourceId="1" SourceUrl="http://localhost:5147/DataFeedService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

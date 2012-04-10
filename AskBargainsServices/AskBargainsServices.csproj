@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,6 +67,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentication\CustomUserNameValidator.cs" />
     <Compile Include="DataContracts\CompanyInfo.cs" />
     <Compile Include="DataContracts\DataInfo.cs" />
     <Compile Include="DataFeeds\DataFeedManager.cs" />

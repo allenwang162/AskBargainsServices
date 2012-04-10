@@ -48,37 +48,37 @@ namespace AskBargainsServices.ServiceImplementation
 
         public IList<DataInfo> GetAllDataInfoOrderByDesc()
         {
-            throw new NotImplementedException();
+            return DataFeedManager.LoadAllDataFeeds().OrderBy(d => d.ItemDescription).ToList();
         }
 
         public IList<DataInfo> GetDataInfoListByItemIDList(List<string> itemIDList)
         {
-            throw new NotImplementedException();
+            return DataFeedManager.LoadAllDataFeeds().Where(d => itemIDList.Contains(d.ItemID)).ToList();
         }
 
         public IList<DataInfo> GetDataInfoListByCompanyID(string companyID)
         {
-            throw new NotImplementedException();
+            return DataFeedManager.LoadAllDataFeeds().Where(d => d.CompanyName == companyID).ToList();
         }
 
         public IList<DataInfo> GetDataInfoListByCompanyName(string companyName)
         {
-            throw new NotImplementedException();
+            return DataFeedManager.LoadAllDataFeeds().Where(d => d.CompanyName == companyName).ToList();
         }
 
         public DataInfo GetDataInfoByItemID(string itemID)
         {
-            throw new NotImplementedException();
+            return DataFeedManager.LoadAllDataFeeds().FirstOrDefault(d => d.ItemID == itemID);
         }
 
         public IList<DataInfo> GetDataInfoListByBrand(string brandName)
         {
-            throw new NotImplementedException();
+            return DataFeedManager.LoadAllDataFeeds().Where(d => d.BrandName == brandName).ToList();
         }
 
         public IList<DataInfo> GetDataInfoListByCatagory(string catagoryName)
         {
-            throw new NotImplementedException();
+            return DataFeedManager.LoadAllDataFeeds().Where(d => d.ItemCategory == catagoryName).ToList();
         }
 
         public IList<CompanyInfo> GetAllCompanyInfoList()
