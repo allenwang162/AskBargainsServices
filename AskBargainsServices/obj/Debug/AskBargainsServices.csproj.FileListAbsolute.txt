@@ -1,8 +1,0 @@
-c:\users\allen.wang\documents\visual studio 2010\Projects\AskBargainsServices\AskBargainsServices\bin\AskBargainsServices.dll
-c:\users\allen.wang\documents\visual studio 2010\Projects\AskBargainsServices\AskBargainsServices\bin\AskBargainsServices.pdb
-c:\users\allen.wang\documents\visual studio 2010\Projects\AskBargainsServices\AskBargainsServices\obj\Debug\AskBargainsServices.dll
-c:\users\allen.wang\documents\visual studio 2010\Projects\AskBargainsServices\AskBargainsServices\obj\Debug\AskBargainsServices.pdb
-C:\Project\AskBargainsServices\AskBargainsServices\bin\AskBargainsServices.dll
-C:\Project\AskBargainsServices\AskBargainsServices\bin\AskBargainsServices.pdb
-C:\Project\AskBargainsServices\AskBargainsServices\obj\Debug\AskBargainsServices.dll
-C:\Project\AskBargainsServices\AskBargainsServices\obj\Debug\AskBargainsServices.pdb

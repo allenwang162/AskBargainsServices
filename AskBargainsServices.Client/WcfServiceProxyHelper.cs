@@ -34,9 +34,9 @@ namespace AskBargainsServices.Client
         /// </summary>
         /// <param name="wcfEndPoint">This is the end point</param>
         /// <returns>Return List of all the invoked proxies</returns>
-        private  ChannelFactory<T> GetChannelFactory(string wcfEndPoint)
+        private static ChannelFactory<T> GetChannelFactory(string wcfEndPoint)
         {
-            ChannelFactory<T> channelFactory = null;
+            ChannelFactory<T> channelFactory;
             //Check if the channel factory exists
             //Create and return an instance of the channel            
             if (! ChannelPool.TryGetValue(wcfEndPoint,out channelFactory))
@@ -56,10 +56,10 @@ namespace AskBargainsServices.Client
         ///             value = serviceProxy.MethodName(params....);
         ///         }, "WCFEndPoint");
         /// </summary>
-        /// <param name="codeBlock">The WCF interface method of interface of type T
+        /// <param name="codeBlockAction">The WCF interface method of interface of type T
         /// </param>
         /// <param name="wcfEndPoint">The end point.</param>
-        public  void Use(Action<T> codeBlock, string wcfEndPoint)
+        public  void Use(Action<T> codeBlockAction, string wcfEndPoint)
         {            
             try
             {
@@ -70,49 +70,35 @@ namespace AskBargainsServices.Client
                     //open the proxy
                     proxy.Open();
                     //Call the method
-                    codeBlock((T)proxy);
+                    codeBlockAction((T)proxy);
                     
                     proxy.Close();
                 }
             }
-                //TODO:Review this when UI handles these exceptions.
-            //catch (FaultException<FaultContracts.ValidationErrorFault> validationError)
-            //{
-            //    if (proxy != null)
-            //    {
-            //        proxy.Abort();
-            //    }
-            //    throw new ApplicationException(validationError.Detail.Message);
-            //}
+            catch (FaultException)
+            {
+                if (proxy != null) proxy.Abort();
+                throw;
+            }
             catch (CommunicationException)
             {
-                if (proxy != null)
-                {
-                    proxy.Abort();
-                }
+                if (proxy != null)proxy.Abort();
                 throw;
             }
             catch (TimeoutException)
             {
-                if (proxy != null)
-                {
-                    proxy.Abort();
-                }
+                if (proxy != null)proxy.Abort();
                 throw;
             }
             catch (Exception)
             {
-                if (proxy != null)
-                {
-                    proxy.Abort();
-                }
+                if (proxy != null)proxy.Abort();
                 throw;
             }
         }
 
         /// <summary>
-        /// This method is called when the proxy is called using an
-        /// async method
+        /// This method is called when the proxy is called using an async method
         /// </summary>
         /// <param name="ar">The result</param>
         private void AsyncResult(IAsyncResult ar)
@@ -126,13 +112,7 @@ namespace AskBargainsServices.Client
         }
 
         /// <summary>
-        /// Invokes the method on the WCF interface with the given end point to 
-        /// create a channel
-        /// Usage
-        /// new ProxyHelper<InterfaceName>().Use(serviceProxy =>
-        ///         {
-        ///             value = serviceProxy.MethodName(params....);
-        ///         }, "WCFEndPoint",callBackMethodName,id);
+        /// Invokes the method on the WCF interface with the given end point to create a channel
         /// </summary>
         /// <param name="codeBlockCallAction">The WCF interface method of interface of type T
         /// </param>
@@ -148,33 +128,29 @@ namespace AskBargainsServices.Client
                 {
                     
                     proxy.Open();
-                    this.callBack = callBackMethod;
+                    callBack = callBackMethod;
                     codeBlock = codeBlockCallAction;
                     if (codeBlockCallAction != null) codeBlockCallAction.BeginInvoke((T)proxy, AsyncResult, obj);
                 }
             }
+            catch (FaultException)
+            {
+                if (proxy != null) proxy.Abort();
+                throw;
+            }
             catch (CommunicationException)
             {
-                if (proxy != null)
-                {
-                    proxy.Abort();
-                }
+                if (proxy != null) proxy.Abort();
                 throw;
             }
             catch (TimeoutException)
             {
-                if (proxy != null)
-                {
-                    proxy.Abort();
-                }
+                if (proxy != null) proxy.Abort();
                 throw;
             }
             catch (Exception)
             {
-                if (proxy != null)
-                {
-                    proxy.Abort();
-                }
+                if (proxy != null) proxy.Abort();
                 throw;
             }
         }

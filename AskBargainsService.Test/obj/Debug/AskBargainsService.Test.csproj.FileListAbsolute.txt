@@ -1,7 +1,0 @@
-C:\Project\AskBargainsServices\AskBargainsService.Test\bin\Debug\AskBargainsService.Test.dll
-C:\Project\AskBargainsServices\AskBargainsService.Test\bin\Debug\AskBargainsService.Test.pdb
-C:\Project\AskBargainsServices\AskBargainsService.Test\bin\Debug\AskBargainsServices.dll
-C:\Project\AskBargainsServices\AskBargainsService.Test\bin\Debug\AskBargainsServices.pdb
-C:\Project\AskBargainsServices\AskBargainsService.Test\obj\Debug\AskBargainsService.Test.csprojResolveAssemblyReference.cache
-C:\Project\AskBargainsServices\AskBargainsService.Test\obj\Debug\AskBargainsService.Test.dll
-C:\Project\AskBargainsServices\AskBargainsService.Test\obj\Debug\AskBargainsService.Test.pdb
