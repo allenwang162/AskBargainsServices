@@ -5,8 +5,18 @@ using System.Threading;
 
 namespace AskBargainsServices.Client
 {
-
+    /// <summary>
+    /// List all the wcfEndpoint configuration binding names
+    /// </summary>
+    public class WcfEndPoints
+    {
+        public const string DataFeedServiceEndPoint = "BasicHttpBinding_IDataFeedService";
+    }
  
+    /// <summary>
+    /// Wcf Service Proxy Call Helper
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public  class WcfServiceProxyHelper<T>
     {
         /// <summary>
@@ -157,7 +167,7 @@ namespace AskBargainsServices.Client
         
         /// <summary>
         /// This method calls the WCF Service in a new thread. The calling of other method for result is the 
-        /// responcibility of the client code
+        /// responsibility of the client code
         /// </summary>
         /// <param name="codeBlockAction">The method on the WCF service to be called</param>
         /// <param name="wcfEndPoint">This is the WCF end point</param>

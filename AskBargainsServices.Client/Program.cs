@@ -18,10 +18,10 @@ namespace AskBargainsServices.Client
             DataInfo[] dataInfos;
             new WcfServiceProxyHelper<IDataFeedService>().Use(serviceProxy =>
                                                                   {
-                                                                      dataInfos =
-                                                                          (serviceProxy).GetDataInfoListByDefault();
-
-                                                                  }, "BasicHttpBinding_IDataFeedService");
+                                                                      dataInfos = serviceProxy.GetDataInfoListByDefault();
+                                             
+                                                                  },
+                                                                  WcfEndPoints.DataFeedServiceEndPoint);
 
         }
     }
