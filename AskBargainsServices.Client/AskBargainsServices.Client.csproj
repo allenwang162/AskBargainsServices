@@ -45,55 +45,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WcfServiceProxyHelper.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\DataFeedService\Reference.cs">
+    <Compile Include="Service References\DataService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="WcfServiceProxyHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\DataFeedService\AskBargainsServices.Client.DataFeedService.CompanyInfo.datasource">
+    <None Include="Service References\DataService\AskBargainsServices.Client.DataService.DataItem.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\DataFeedService\AskBargainsServices.Client.DataFeedService.DataInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DataFeedService\DataFeedService.wsdl" />
-    <None Include="Service References\DataFeedService\DataFeedService.xsd">
+    <None Include="Service References\DataService\DataService.wsdl" />
+    <None Include="Service References\DataService\DataService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataFeedService\DataFeedService1.wsdl" />
-    <None Include="Service References\DataFeedService\DataFeedService1.xsd">
+    <None Include="Service References\DataService\DataService1.wsdl" />
+    <None Include="Service References\DataService\DataService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\DataFeedService\DataFeedService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\DataFeedService\DataFeedService3.xsd">
+    <None Include="Service References\DataService\DataService2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\DataFeedService\" />
+    <WCFMetadataStorage Include="Service References\DataService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\DataFeedService\DataFeedService.disco" />
+    <None Include="Service References\DataService\DataService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\DataFeedService\configuration91.svcinfo" />
+    <None Include="Service References\DataService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\DataFeedService\configuration.svcinfo" />
+    <None Include="Service References\DataService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\DataFeedService\Reference.svcmap">
+    <None Include="Service References\DataService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

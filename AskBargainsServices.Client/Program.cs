@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using AskBargainsServices.Client.DataFeedService;
+using AskBargainsServices.Client.DataService;
+
 
 namespace AskBargainsServices.Client
 {
@@ -10,19 +9,21 @@ namespace AskBargainsServices.Client
     {
         static void Main(string[] args)
         {
-            //using(var client = new DataFeedServiceClient())
-            //{
-            //    var result = client.GetDataInfoListByDefault();
-            //}
 
-            DataInfo[] dataInfos;
-            new WcfServiceProxyHelper<IDataFeedService>().Use(serviceProxy =>
+
+            IList<DataItem> dataInfos = null;
+            new WcfServiceProxyHelper<IDataService>().Use(serviceProxy =>
                                                                   {
-                                                                      dataInfos = serviceProxy.GetDataInfoListByDefault();
-                                             
+                                                                    dataInfos = serviceProxy.GetAllDataItems();
                                                                   },
                                                                   WcfEndPoints.DataFeedServiceEndPoint);
-
+            if(dataInfos != null)
+            {
+                foreach (var dataInfo in dataInfos)
+                {
+                   
+                }
+            }
         }
     }
 }

@@ -1,2 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<publishData />
+<publishData>
+  <publishProfile publishUrl="C:\New folder\WebSite" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="App_Data/DataFeed20120324.xml" publishTime="04/02/2012 13:19:12" />
+    <file relUrl="App_Data/DataFeed20120322.xml" publishTime="04/02/2012 11:12:31" />
+    <file relUrl="bin/AskBargainsServices.pdb" publishTime="04/16/2012 10:07:23" />
+    <file relUrl="bin/AskBargainsServices.dll" publishTime="04/16/2012 10:07:23" />
+    <file relUrl="Web.config" publishTime="04/16/2012 10:08:13" />
+    <file relUrl="DataFeedService.svc" publishTime="04/05/2012 10:14:06" />
+    <file relUrl="App_Data/DataFeed20120323.xml" publishTime="04/02/2012 13:19:20" />
+  </publishProfile>
+</publishData>

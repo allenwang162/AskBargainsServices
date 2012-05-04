@@ -10,7 +10,7 @@ namespace AskBargainsServices.Client
     /// </summary>
     public class WcfEndPoints
     {
-        public const string DataFeedServiceEndPoint = "BasicHttpBinding_IDataFeedService";
+        public const string DataFeedServiceEndPoint = "BasicHttpBinding_IDataService";
     }
  
     /// <summary>

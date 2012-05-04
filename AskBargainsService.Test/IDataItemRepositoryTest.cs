@@ -1,4 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Data.Entity;
+using AskBargains.DataEF.DAL;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using AskBargains.DataEF.Models;
 using System.Collections.Generic;
 
 namespace AskBargainsService.Test
@@ -6,11 +10,11 @@ namespace AskBargainsService.Test
     
     
     /// <summary>
-    ///This is a test class for DataFeedManagerTest and is intended
-    ///to contain all DataFeedManagerTest Unit Tests
+    ///This is a test class for IDataItemRepositoryTest and is intended
+    ///to contain all IDataItemRepositoryTest Unit Tests
     ///</summary>
     [TestClass()]
-    public class DataFeedManagerTest
+    public class IDataItemRepositoryTest
     {
 
 
@@ -63,17 +67,28 @@ namespace AskBargainsService.Test
         #endregion
 
 
-        /// <summary>
-        ///A test for LoadAllDataFeeds
-        ///</summary>
-        // TODO: Ensure that the UrlToTest attribute specifies a URL to an ASP.NET page (for example,
-        // http://.../Default.aspx). This is necessary for the unit test to be executed on the web server,
-        // whether you are testing a page, web service, or a WCF service.
-        [TestMethod()]
-        public void LoadAllDataFeedsTest()
+        internal virtual IDataItemRepository CreateIDataItemRepository()
         {
-         
-           
+            // TODO: Instantiate an appropriate concrete class.
+
+            Database.SetInitializer(new DataItemInitializer());
+            var context = new DataItemContext();
+            context.Database.Initialize(true);
+
+            IDataItemRepository target = new DataItemRepository(new DataItemContext());
+            return target;
+        }
+
+        /// <summary>
+        ///A test for GetDataItems
+        ///</summary>
+        [TestMethod()]
+        public void GetDataItemsTest()
+        {
+            IDataItemRepository target = CreateIDataItemRepository(); // TODO: Initialize to an appropriate value
+            var result = target.GetDataItems();
+            Assert.AreEqual(result.Count, 4);
+            Assert.AreEqual(result[0].Comments.Count , 3);
         }
     }
 }
