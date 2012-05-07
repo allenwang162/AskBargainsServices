@@ -71,9 +71,9 @@ namespace AskBargainsService.Test
         {
             // TODO: Instantiate an appropriate concrete class.
 
-            Database.SetInitializer(new DataItemInitializer());
-            var context = new DataItemContext();
-            context.Database.Initialize(true);
+            //Database.SetInitializer(new DataItemInitializer());
+            //var context = new DataItemContext();
+            //context.Database.Initialize(true);
 
             IDataItemRepository target = new DataItemRepository(new DataItemContext());
             return target;

@@ -13,11 +13,11 @@ namespace AskBargains.DataEF.DAL
         private readonly DataItemContext context;
 
         #region ctor
-        public DataItemRepository(DataItemContext context)
+        public DataItemRepository(DataItemContext ctxt)
         {
-            this.context = context;
-            this.context.Configuration.ProxyCreationEnabled = false;
-            this.context.Configuration.LazyLoadingEnabled = false;
+            context = ctxt;
+            context.Configuration.ProxyCreationEnabled = false;
+            context.Configuration.LazyLoadingEnabled = false;
         }
         #endregion
         
