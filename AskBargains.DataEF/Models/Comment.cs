@@ -14,9 +14,8 @@ namespace AskBargains.DataEF.Models
         [DataMember]
         public int CommentId { get; set; }
 
-
         [DataMember]
-        public int DataItemId { get; set; }
+        public long DataItemId { get; set; }
 
         [DataMember]
         public string CommentText { get; set; }
@@ -26,9 +25,6 @@ namespace AskBargains.DataEF.Models
 
         [DataMember]
         public string Commentator { get; set; }
-
-        [DataMember]
-        public virtual DataItem DataItem { get; set; }
 
     }
 }

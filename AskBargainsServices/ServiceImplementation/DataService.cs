@@ -34,7 +34,11 @@ namespace AskBargainsServices.ServiceImplementation
             return test;
         }
 
-     
+        public DataItem GetDataItemById(long dataItmeId)
+        {
+            var test = dataItemRepository.GetDataItemtById(dataItmeId);
+            return test;
+        }
 
         #endregion
 

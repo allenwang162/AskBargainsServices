@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e5ba9b49-79db-4fef-b4ab-9bfc10d29cda" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="55a78098-69ee-4d85-80bb-cf9c21af192f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,15 +18,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:5147/DataService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/AskBargainsServices/DataService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DataService.disco" MetadataType="Disco" ID="9768e7ad-6f25-42b7-a934-f9d17572cb44" SourceId="1" SourceUrl="http://localhost:5147/DataService.svc?disco" />
-    <MetadataFile FileName="DataService.wsdl" MetadataType="Wsdl" ID="d567f957-2198-472c-bb03-a6c365eafa36" SourceId="1" SourceUrl="http://localhost:5147/DataService.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="DataService1.wsdl" MetadataType="Wsdl" ID="d8b10b26-71ac-43fa-8eb9-1cca54bf9937" SourceId="1" SourceUrl="http://localhost:5147/DataService.svc?wsdl" />
-    <MetadataFile FileName="DataService.xsd" MetadataType="Schema" ID="4fe50d32-43ec-4168-9a60-29776ca61cbb" SourceId="1" SourceUrl="http://localhost:5147/DataService.svc?xsd=xsd2" />
-    <MetadataFile FileName="DataService1.xsd" MetadataType="Schema" ID="8fa69555-598d-45d9-b87d-4efc77aec8db" SourceId="1" SourceUrl="http://localhost:5147/DataService.svc?xsd=xsd0" />
-    <MetadataFile FileName="DataService2.xsd" MetadataType="Schema" ID="94b067a7-d356-4e04-8e06-8a7fa35a8bd8" SourceId="1" SourceUrl="http://localhost:5147/DataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataService.disco" MetadataType="Disco" ID="ab21e48d-e9f8-4950-9fff-c981632b8189" SourceId="1" SourceUrl="http://localhost/AskBargainsServices/DataService.svc?disco" />
+    <MetadataFile FileName="DataService.wsdl" MetadataType="Wsdl" ID="51cf33cc-e678-4b28-9bd8-393a89f4e954" SourceId="1" SourceUrl="http://localhost/AskBargainsServices/DataService.svc?wsdl" />
+    <MetadataFile FileName="DataService1.wsdl" MetadataType="Wsdl" ID="4ec602d8-18aa-4e73-818d-7d8440fb0e7d" SourceId="1" SourceUrl="http://localhost/AskBargainsServices/DataService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DataService.xsd" MetadataType="Schema" ID="2bf89b8f-a77a-40bc-8771-323cf3fda78c" SourceId="1" SourceUrl="http://localhost/AskBargainsServices/DataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataService1.xsd" MetadataType="Schema" ID="9bf762f1-768d-428a-83d3-76537ffc9293" SourceId="1" SourceUrl="http://localhost/AskBargainsServices/DataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataService2.xsd" MetadataType="Schema" ID="793ce965-a399-45fe-8e52-5f44c9444ba9" SourceId="1" SourceUrl="http://localhost/AskBargainsServices/DataService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

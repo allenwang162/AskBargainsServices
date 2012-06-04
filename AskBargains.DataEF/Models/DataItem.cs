@@ -12,7 +12,7 @@ namespace AskBargains.DataEF.Models
     {
         [Key]
         [DataMember]
-        public int DataItemId { get; set; }
+        public long DataItemId { get; set; }
 
         [DataMember]
         public string ItemName { get; set; }
@@ -39,10 +39,10 @@ namespace AskBargains.DataEF.Models
         public string ItemPrice { get; set; }
 
         [DataMember]
-        public string PublishDate { get; set; }
+        public DateTime PublishDate { get; set; }
         
         [DataMember]
-        public string ExpireDate { get; set; }
+        public DateTime ExpireDate { get; set; }
 
         [DataMember]
         public string ItemCategory { get; set; }
@@ -85,6 +85,16 @@ namespace AskBargains.DataEF.Models
 
         [DataMember]
         public string Today { get; set; }
+
+        [DataMember]
+        public string MetaKeyword { get; set; }
+
+        [DataMember]
+        public string MetaDescription { get; set; }
+
+        [DataMember]
+        public string Others { get; set; }
+     
 
         [DataMember]
         public virtual ICollection<Comment> Comments { get; set; }

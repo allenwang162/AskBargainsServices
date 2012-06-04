@@ -11,6 +11,9 @@ namespace AskBargainsServices.ServiceContracts
         [OperationContract]
         IList<DataItem> GetAllDataItems();
 
+        [OperationContract]
+        DataItem GetDataItemById(long dataItmeId);
+
 
     }
 }

@@ -11,18 +11,14 @@ namespace AskBargainsServices.Client
         {
 
 
-            IList<DataItem> dataInfos = null;
+            DataItem dataInfos = null;
             new WcfServiceProxyHelper<IDataService>().Use(serviceProxy =>
                                                                   {
-                                                                    dataInfos = serviceProxy.GetAllDataItems();
+                                                                      dataInfos = serviceProxy.GetDataItemById(20120514134959629);
                                                                   },
                                                                   WcfEndPoints.DataFeedServiceEndPoint);
-            if(dataInfos != null)
+            if (dataInfos != null)
             {
-                foreach (var dataInfo in dataInfos)
-                {
-                   
-                }
             }
         }
     }

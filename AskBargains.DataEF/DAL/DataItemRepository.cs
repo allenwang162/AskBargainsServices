@@ -27,7 +27,7 @@ namespace AskBargains.DataEF.DAL
             return context.DataItems.Include(d=>d.Comments).ToList();
         }
 
-        public DataItem GetDataItemtById(int dataItemId)
+        public DataItem GetDataItemtById(long dataItemId)
         {
             return context.DataItems.Where(d=>d.DataItemId == dataItemId).Include(d=>d.Comments).FirstOrDefault();
         }

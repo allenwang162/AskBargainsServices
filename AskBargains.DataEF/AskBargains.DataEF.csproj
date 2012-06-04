@@ -51,6 +51,11 @@
     <Compile Include="DAL\DataItemInitializer.cs" />
     <Compile Include="DAL\DataItemRepository.cs" />
     <Compile Include="DAL\IDataItemRepository.cs" />
+    <Compile Include="Migrations\201205071529595_InitialCreate.cs" />
+    <Compile Include="Migrations\201205071529595_InitialCreate.Designer.cs">
+      <DependentUpon>201205071529595_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\DataItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.ServiceModel;
+using System.ServiceModel.Description;
 using System.Threading;
 
 namespace AskBargainsServices.Client
@@ -75,6 +77,7 @@ namespace AskBargainsServices.Client
             {
                 //Create an instance of proxy
                 proxy = GetChannelFactory(wcfEndPoint).CreateChannel() as IClientChannel;
+           
                 if (proxy != null)
                 {
                     //open the proxy

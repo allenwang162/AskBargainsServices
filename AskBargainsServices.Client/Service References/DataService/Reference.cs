@@ -41,10 +41,10 @@ namespace AskBargainsServices.Client.DataService {
         private string CouponCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int DataItemIdField;
+        private long DataItemIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ExpireDateField;
+        private System.DateTime ExpireDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ForwardLinkField;
@@ -65,13 +65,22 @@ namespace AskBargainsServices.Client.DataService {
         private string ItemPriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MetaDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MetaKeywordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string OriginalPriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OthersField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PromotionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PublishDateField;
+        private System.DateTime PublishDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string RebateField;
@@ -189,7 +198,7 @@ namespace AskBargainsServices.Client.DataService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int DataItemId {
+        public long DataItemId {
             get {
                 return this.DataItemIdField;
             }
@@ -202,12 +211,12 @@ namespace AskBargainsServices.Client.DataService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ExpireDate {
+        public System.DateTime ExpireDate {
             get {
                 return this.ExpireDateField;
             }
             set {
-                if ((object.ReferenceEquals(this.ExpireDateField, value) != true)) {
+                if ((this.ExpireDateField.Equals(value) != true)) {
                     this.ExpireDateField = value;
                     this.RaisePropertyChanged("ExpireDate");
                 }
@@ -293,6 +302,32 @@ namespace AskBargainsServices.Client.DataService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MetaDescription {
+            get {
+                return this.MetaDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MetaDescriptionField, value) != true)) {
+                    this.MetaDescriptionField = value;
+                    this.RaisePropertyChanged("MetaDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MetaKeyword {
+            get {
+                return this.MetaKeywordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MetaKeywordField, value) != true)) {
+                    this.MetaKeywordField = value;
+                    this.RaisePropertyChanged("MetaKeyword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string OriginalPrice {
             get {
                 return this.OriginalPriceField;
@@ -301,6 +336,19 @@ namespace AskBargainsServices.Client.DataService {
                 if ((object.ReferenceEquals(this.OriginalPriceField, value) != true)) {
                     this.OriginalPriceField = value;
                     this.RaisePropertyChanged("OriginalPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Others {
+            get {
+                return this.OthersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OthersField, value) != true)) {
+                    this.OthersField = value;
+                    this.RaisePropertyChanged("Others");
                 }
             }
         }
@@ -319,12 +367,12 @@ namespace AskBargainsServices.Client.DataService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PublishDate {
+        public System.DateTime PublishDate {
             get {
                 return this.PublishDateField;
             }
             set {
-                if ((object.ReferenceEquals(this.PublishDateField, value) != true)) {
+                if ((this.PublishDateField.Equals(value) != true)) {
                     this.PublishDateField = value;
                     this.RaisePropertyChanged("PublishDate");
                 }
@@ -477,10 +525,13 @@ namespace AskBargainsServices.Client.DataService {
         private string CommentTextField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CommentatorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private AskBargainsServices.Client.DataService.DataItem DataItemField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int DataItemIdField;
+        private long DataItemIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -532,6 +583,19 @@ namespace AskBargainsServices.Client.DataService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Commentator {
+            get {
+                return this.CommentatorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommentatorField, value) != true)) {
+                    this.CommentatorField = value;
+                    this.RaisePropertyChanged("Commentator");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public AskBargainsServices.Client.DataService.DataItem DataItem {
             get {
                 return this.DataItemField;
@@ -545,7 +609,7 @@ namespace AskBargainsServices.Client.DataService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int DataItemId {
+        public long DataItemId {
             get {
                 return this.DataItemIdField;
             }
@@ -573,6 +637,9 @@ namespace AskBargainsServices.Client.DataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetAllDataItems", ReplyAction="http://tempuri.org/IDataService/GetAllDataItemsResponse")]
         AskBargainsServices.Client.DataService.DataItem[] GetAllDataItems();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetDataItemById", ReplyAction="http://tempuri.org/IDataService/GetDataItemByIdResponse")]
+        AskBargainsServices.Client.DataService.DataItem GetDataItemById(long dataItmeId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -604,6 +671,10 @@ namespace AskBargainsServices.Client.DataService {
         
         public AskBargainsServices.Client.DataService.DataItem[] GetAllDataItems() {
             return base.Channel.GetAllDataItems();
+        }
+        
+        public AskBargainsServices.Client.DataService.DataItem GetDataItemById(long dataItmeId) {
+            return base.Channel.GetDataItemById(dataItmeId);
         }
     }
 }

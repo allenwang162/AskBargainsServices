@@ -14,17 +14,20 @@
       <xs:element minOccurs="0" name="Condition" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CouponCode" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DataItemId" type="xs:int" />
-      <xs:element minOccurs="0" name="ExpireDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataItemId" type="xs:long" />
+      <xs:element minOccurs="0" name="ExpireDate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ForwardLink" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ImgPath" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ItemCategory" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ItemPrice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MetaDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MetaKeyword" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OriginalPrice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Others" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Promotion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="PublishDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublishDate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Rebate" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Save" nillable="true" type="xs:string" />
@@ -48,8 +51,9 @@
       <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
       <xs:element minOccurs="0" name="CommentId" type="xs:int" />
       <xs:element minOccurs="0" name="CommentText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Commentator" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="DataItem" nillable="true" type="tns:DataItem" />
-      <xs:element minOccurs="0" name="DataItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="DataItemId" type="xs:long" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Comment" nillable="true" type="tns:Comment" />
