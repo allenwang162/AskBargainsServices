@@ -28,16 +28,16 @@ namespace AskBargainsServices.ServiceImplementation
 
 
 
-        public IList<DataItem> GetAllDataItems()
+        public IList<DataItem> GetAllDataItems(int topNumber)
         {
-            var test = dataItemRepository.GetDataItems().ToList();
-            return test;
+            var dataItems = dataItemRepository.GetDataItems(topNumber).ToList();
+            return dataItems;
         }
 
         public DataItem GetDataItemById(long dataItmeId)
         {
-            var test = dataItemRepository.GetDataItemtById(dataItmeId);
-            return test;
+            var dataItem = dataItemRepository.GetDataItemtById(dataItmeId);
+            return dataItem;
         }
 
         #endregion

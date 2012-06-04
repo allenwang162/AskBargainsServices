@@ -9,7 +9,7 @@ namespace AskBargainsServices.ServiceContracts
     {
 
         [OperationContract]
-        IList<DataItem> GetAllDataItems();
+        IList<DataItem> GetAllDataItems(int topNumber);
 
         [OperationContract]
         DataItem GetDataItemById(long dataItmeId);

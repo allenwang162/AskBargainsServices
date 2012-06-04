@@ -22,9 +22,9 @@ namespace AskBargains.DataEF.DAL
         #endregion
         
         #region IDataItemRepository
-        public IList<DataItem> GetDataItems()
+        public IList<DataItem> GetDataItems(int topNumber)
         {
-            return context.DataItems.Include(d=>d.Comments).ToList();
+            return context.DataItems.Include(d=>d.Comments).Take(topNumber).ToList();
         }
 
         public DataItem GetDataItemtById(long dataItemId)

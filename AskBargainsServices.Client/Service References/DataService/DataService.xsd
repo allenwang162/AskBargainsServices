@@ -52,7 +52,6 @@
       <xs:element minOccurs="0" name="CommentId" type="xs:int" />
       <xs:element minOccurs="0" name="CommentText" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Commentator" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DataItem" nillable="true" type="tns:DataItem" />
       <xs:element minOccurs="0" name="DataItemId" type="xs:long" />
     </xs:sequence>
   </xs:complexType>

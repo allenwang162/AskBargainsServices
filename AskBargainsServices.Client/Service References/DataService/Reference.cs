@@ -528,9 +528,6 @@ namespace AskBargainsServices.Client.DataService {
         private string CommentatorField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AskBargainsServices.Client.DataService.DataItem DataItemField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private long DataItemIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -596,19 +593,6 @@ namespace AskBargainsServices.Client.DataService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AskBargainsServices.Client.DataService.DataItem DataItem {
-            get {
-                return this.DataItemField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DataItemField, value) != true)) {
-                    this.DataItemField = value;
-                    this.RaisePropertyChanged("DataItem");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public long DataItemId {
             get {
                 return this.DataItemIdField;
@@ -636,7 +620,7 @@ namespace AskBargainsServices.Client.DataService {
     public interface IDataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetAllDataItems", ReplyAction="http://tempuri.org/IDataService/GetAllDataItemsResponse")]
-        AskBargainsServices.Client.DataService.DataItem[] GetAllDataItems();
+        AskBargainsServices.Client.DataService.DataItem[] GetAllDataItems(int topNumber);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetDataItemById", ReplyAction="http://tempuri.org/IDataService/GetDataItemByIdResponse")]
         AskBargainsServices.Client.DataService.DataItem GetDataItemById(long dataItmeId);
@@ -669,8 +653,8 @@ namespace AskBargainsServices.Client.DataService {
                 base(binding, remoteAddress) {
         }
         
-        public AskBargainsServices.Client.DataService.DataItem[] GetAllDataItems() {
-            return base.Channel.GetAllDataItems();
+        public AskBargainsServices.Client.DataService.DataItem[] GetAllDataItems(int topNumber) {
+            return base.Channel.GetAllDataItems(topNumber);
         }
         
         public AskBargainsServices.Client.DataService.DataItem GetDataItemById(long dataItmeId) {

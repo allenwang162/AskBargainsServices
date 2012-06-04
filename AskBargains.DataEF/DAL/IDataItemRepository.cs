@@ -8,7 +8,7 @@ namespace AskBargains.DataEF.DAL
 {
     public interface IDataItemRepository : IDisposable
     {
-        IList<DataItem> GetDataItems();
+        IList<DataItem> GetDataItems(int topNumber);
         DataItem GetDataItemtById(long dataItemId);
         void InsertDataItem(DataItem dataItem);
         void DeleteDataItem(int dataItemId);

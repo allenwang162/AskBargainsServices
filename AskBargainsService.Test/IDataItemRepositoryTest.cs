@@ -86,7 +86,7 @@ namespace AskBargainsService.Test
         public void GetDataItemsTest()
         {
             IDataItemRepository target = CreateIDataItemRepository(); // TODO: Initialize to an appropriate value
-            var result = target.GetDataItems();
+            var result = target.GetDataItems(10);
             Assert.AreEqual(result.Count, 4);
             Assert.AreEqual(result[0].Comments.Count , 3);
         }

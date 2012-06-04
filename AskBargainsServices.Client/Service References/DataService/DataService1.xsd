@@ -3,7 +3,9 @@
   <xs:import schemaLocation="http://localhost/AskBargainsServices/DataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AskBargains.DataEF.Models" />
   <xs:element name="GetAllDataItems">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="topNumber" type="xs:int" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetAllDataItemsResponse">
